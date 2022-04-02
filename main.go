@@ -2,9 +2,17 @@ package main
 
 import (
 	"fmt"
-	"github.com/rawka/bootcamp/mascot"
+	"os"
+	"strings"
 )
 
 func main() {
-	fmt.Println(mascot.BestMascot())
+	msg := os.Args[1]
+	l := len(msg)
+
+	r := strings.Repeat("!", l)
+	s := r + msg + r
+	s = strings.ToUpper(s)
+
+	fmt.Println(s)
 }
